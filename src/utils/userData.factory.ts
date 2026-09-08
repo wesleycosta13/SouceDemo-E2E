@@ -1,4 +1,4 @@
-import { faker } from '@faker-js/faker/locale/pt_BR';
+import { fakerPT_BR as faker } from '@faker-js/faker';
 
 export interface CheckoutUserInfo {
   firstName: string;

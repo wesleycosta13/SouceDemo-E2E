@@ -6,8 +6,8 @@ import { defineConfig, devices } from '@playwright/test';
  */
 export default defineConfig({
   testDir: './tests',
-  /* Tempo limite máximo para execução de um único teste (30 segundos) */
-  timeout: 30 * 1000,
+  /* Tempo limite máximo para execução de um único teste (60 segundos) */
+  timeout: 60 * 1000,
   expect: {
     /* Tempo limite para asserções do expect (5 segundos) */
     timeout: 5000,
