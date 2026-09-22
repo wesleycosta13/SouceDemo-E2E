@@ -1,27 +1,27 @@
-# 🚀 Automação de Testes E2E - SauceDemo com Playwright & TypeScript
+# Automação de Testes E2E - SauceDemo com Playwright & TypeScript
 
 Projeto completo de automação de testes End-to-End (E2E) para a aplicação web [SauceDemo](https://www.saucedemo.com/), desenvolvido utilizando **Playwright**, **TypeScript**, a arquitetura **Page Object Model (POM)**, **Custom Fixtures**, dados dinâmicos com **Faker.js** e integração contínua no **GitHub Actions**.
 
 ---
 
-## 📋 Conteúdo e Recursos do Projeto
+##  Conteúdo e Recursos do Projeto
 
-- 🛠 **Playwright + TypeScript**: Configuração moderna com tipagem estática e alta performance.
-- 📐 **Page Object Model (POM)**: Abstração das telas e componentes em classes reutilizáveis.
-- 🧪 **Custom Fixtures**: Injeção automática das páginas nos testes, eliminando código repetitivo.
-- 🎲 **Faker.js (`@faker-js/faker`)**: Geração dinâmica e realista de dados de comprador no checkout.
-- 🚦 **Cenários Positivos e Negativos**:
+-  **Playwright + TypeScript**: Configuração moderna com tipagem estática e alta performance.
+-  **Page Object Model (POM)**: Abstração das telas e componentes em classes reutilizáveis.
+-  **Custom Fixtures**: Injeção automática das páginas nos testes, eliminando código repetitivo.
+-  **Faker.js (`@faker-js/faker`)**: Geração dinâmica e realista de dados de comprador no checkout.
+-  **Cenários Positivos e Negativos**:
   - **Login / Autenticação**: Sucesso, usuário bloqueado, senha incorreta e campos vazios.
   - **Produtos & Filtros**: Ordenação A-Z, Z-A, preço crescente e decrescente, inclusão e remoção.
   - **Carrinho de Compras**: Validação de itens, remoção interna e retorno ao catálogo.
   - **Checkout E2E**: Fluxo de compra completo e validações dos campos obrigatórios (Primeiro Nome, Sobrenome, CEP).
-- 📊 **Relatórios de Execução**: Relatórios HTML interativos e no terminal.
-- 📷 **Screenshots, Vídeos e Traces**: Captura automática somente em caso de falhas para depuração rápida.
-- ⚙️ **GitHub Actions (CI)**: Pipeline configurada para execução automatizada em cada `push` e `pull_request`.
+-  **Relatórios de Execução**: Relatórios HTML interativos e no terminal.
+-  **Screenshots, Vídeos e Traces**: Captura automática somente em caso de falhas para depuração rápida.
+-  **GitHub Actions (CI)**: Pipeline configurada para execução automatizada em cada `push` e `pull_request`.
 
 ---
 
-## 📁 Arquitetura e Estrutura de Pastas
+##  Arquitetura e Estrutura de Pastas
 
 ```text
 SouceDemo-E2E/
@@ -56,7 +56,7 @@ SouceDemo-E2E/
 
 ---
 
-## ⚙️ Pré-requisitos
+##  Pré-requisitos
 
 Antes de iniciar, certifique-se de ter instalado em sua máquina:
 - **Node.js**: Versão 18 ou superior ([Download Node.js](https://nodejs.org/))
@@ -64,7 +64,7 @@ Antes de iniciar, certifique-se de ter instalado em sua máquina:
 
 ---
 
-## 🔧 Instalação e Configuração
+##  Instalação e Configuração
 
 1. Clone ou abra este repositório no seu computador:
    ```bash
@@ -109,7 +109,7 @@ npx playwright test --project=chromium
 
 ---
 
-## 🔍 Screenshots, Vídeos e Traces em Falhas
+##  Screenshots, Vídeos e Traces em Falhas
 
 No arquivo `playwright.config.ts`, o projeto está pré-configurado com as seguintes políticas de captura:
 - **`screenshot: 'only-on-failure'`**: Tira foto da tela exata em que o teste falhar.
@@ -118,7 +118,7 @@ No arquivo `playwright.config.ts`, o projeto está pré-configurado com as segui
 
 ---
 
-## 🔄 Integração Contínua (CI) com GitHub Actions
+##  Integração Contínua (CI) com GitHub Actions
 
 O arquivo [playwright.yml](file:///.github/workflows/playwright.yml) garante que, a cada *push* ou *pull request* nos branches `main` ou `master`:
 1. As dependências e navegadores sejam instalados no ambiente Linux do GitHub.
@@ -127,7 +127,7 @@ O arquivo [playwright.yml](file:///.github/workflows/playwright.yml) garante que
 
 ---
 
-## 💡 Dicas de Boas Práticas Utilizadas
+##  Dicas de Boas Práticas Utilizadas
 
 1. **Uso de Fixtures (`test.fixture.ts`)**: Em vez de declarar `new LoginPage(page)` no início de cada teste, os Page Objects são injetados diretamente na assinatura da função de teste (`({ loginPage, productsPage }) => ...`).
 2. **Dados Dinâmicos com Faker.js (`userData.factory.ts`)**: Garantimos que cada execução de checkout utilize dados únicos (nome, sobrenome, CEP), reduzindo falsos positivos por dados duplicados.
