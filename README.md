@@ -83,7 +83,7 @@ Antes de iniciar, certifique-se de ter instalado em sua máquina:
 
 ---
 
-## 🏃 Executando os Testes
+##  Executando os Testes
 
 Você pode executar os testes utilizando os scripts npm pré-configurados no `package.json`:
 
